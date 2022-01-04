@@ -21,7 +21,8 @@ def show_fig(mean_list):
     df=mean_list
     mean=st.mean(df)
     fig=ff.create_distplot([df],['average'],show_hist=False)
-    fig.add_trace(go.Scatter(x=[mean,mean],y=[0,1],mode='lines',name='MEAN'))
+    fig.add_trace(go.Scatter(x=[mean,mean],y=[0,40],mode='lines',name='MEAN'))
+    fig.show()
 
 def setup():
     mean_list=[]
